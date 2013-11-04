@@ -1,6 +1,6 @@
 {
   "groups": [
-    "USERNAME",
+    "mrhjkim",
     "wheel",
     "sysadmin",
     "dialout",
@@ -12,11 +12,11 @@
     "sambashare",
     "sbuild"
   ],
-  "comment": "FULL NAME",
-  "ssh_keys": "SSH public key(s)",
-  "id": "USERNAME",
-  "uid": 1000,
-  "shell": "/bin/zsh",
+  "comment": "Kim Hae-Joo",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEArpSSGyFoGnfrRfj+P0eBEjlDrXsFSBOqWk+svUpFh+PRaYNElBS/gFZ2BiPe7Q6ZkZ0Y+sFicvmvdtixEd6V5j3hSiREnBq+1RuCLngewV3yqVxLiYIulFmBHBziZviAGhjuHjtn73lgO8J9dAZFcLxStirgnQ4+hxDR2gi2yVuXpGzHUceR2tvc0PZf1QB+fIzHWbbQK/xdADx/Rb8SjAvZ76veuCHeimtKhsV4QpdVK4Lxw+eImWRF+NwsdLJN2uWpR/dg1dQ24gpBi5UPyJJpHeRllXNd3/GbRgJk7hHhsBj+O51K3EkXJXw480tBpr4PMx9jkxl1v51JpoO9vw== mrhjkim@mrhjkim.local",
+  "id": "mrhjkim",
+  "uid": 501,
+  "shell": "\/bin\/bash",
   "repos": {
     /*
       Repositories that should be checked out. They have the following
@@ -27,18 +27,18 @@
       }
     */
     // Examples:
+    /*
     ".rbenv": {
       "repo": "git://github.com/sstephenson/rbenv.git",
       "revision": "HEAD"
-    },
-    ".emacs.d": {
-      "repo": "git@github.com:USERNAME/.emacs.d.git",
-      "revision": "HEAD"
-    },
-    "Development/opscode/chef": {
-      "repo": "git@github.com:USERNAME/chef.git", // your fork of Chef
+    }
+	*/
+	/*
+    "Development/uangel/chef": {
+      "repo": "git@github.com:mrhjkim/chef.git", // your fork of Chef
       "revision": "HEAD"
     }
+	*/
   },
   "files": {
     /*
@@ -51,14 +51,5 @@
         "source": "dot_file"
       }
      */
-    // Examples:
-    ".zshrc": {
-      "mode": "0644",
-      "source": "dot-zshrc"
-    },
-    ".gemrc": {
-      "mode": "0644",
-      "source": "dot-gemrc"
-    }
   }
 }

@@ -3,17 +3,17 @@ description "Mac OS X worksations"
 
 run_list(
   "recipe[build-essential]",
-  "recipe[git]",
-  "recipe[ruby_build]",
-  "recipe[rbenv::user]",
+  #"recipe[git]",
+  #"recipe[ruby_build]",
+  #"recipe[rbenv::user]",
   "recipe[users]",
   "recipe[workstation]",
   "recipe[mac_os_x::settings]",
   "recipe[mac_os_x::firewall]",
   # Additional applications that have their own cookbooks.
   "recipe[iterm2]",
-  "recipe[virtualbox]",
-  "recipe[ghmac]",
+  #"recipe[virtualbox]",
+  #"recipe[ghmac]",
   "recipe[1password]",
   "recipe[xquartz]"
 )
@@ -42,72 +42,34 @@ default_attributes(
       "dock" => {
         "domain" => "com.apple.dock",
         "autohide" => true,
-        "dashboard-in-overlay" => true,
-        "launchanim" => false,
         "magnification" => true,
-        "mineffect" => "scale",
         "minimize-to-application" => true,
-        "mru-spaces" => false,
-        "showAppExposeGestureEnabled" => true,
-        "showDesktopGestureEnabled" => false,
-        "showLaunchpadGestureEnabled" => false,
-        "tilesize" => 20,
-        "wvous-bl-modifier" => 0,
-        "wvous-bl-corner" => 5
+        "tilesize" => 64,
+		"orientation" => "right"
       },
       "trackpad" => {
         "domain" => "com.apple.driver.AppleBluetoothMultitouch.trackpad",
-        "Clicking" => true,
-        "TrackpadThreeFingerDrag" => true,
-        "TrackpadThreeFingerHorizSwipeGesture" => false,
-        "TrackpadThreeFingerVertSwipeGesture" => false,
-        "TrackpadFiveFingerPinchGesture" => false,
-        "TrackpadFourFingerPinchGesture" => false
+        "Clicking" => true
       },
       "finder" => {
         "domain" => "com.apple.finder",
-        "EmptyTrashSecurely" => true,
-        "FXArrangeGroupViewBy" => "Name",
-        "FXPreferredViewStyle" => "Nlsv", # list view
-        "NewWindowTarget" => "PfHm", # home directory
-        "ShowExternalHardDrivesOnDesktop" => true
+        "FXPreferredViewStyle" => "Nlsv" # list view
       },
       "global" => {
         "domain" => "NSGlobalDomain",
-        "AppleEnableMenuBarTransparency" => false,
-        "AppleShowScrollBars" => "Always",
-        "InitialKeyRepeat" => 15,
+        "InitialKeyRepeat" => 25,
         "KeyRepeat" => 2,
-        "NSAutomaticSpellingCorrectionEnabled" => false,
-        "NSUserReplacementItemsEnabled" => false,
-        "WebAutomaticSpellingCorrectionEnabled" => false,
-        "WebAutomaticTextReplacementEnabled" => 0,
         "com.apple.springing.delay" => "0.5",
-        "com.apple.springing.enabled" => 1,
-        "com.apple.trackpad.scaling" => 3
+        "com.apple.springing.enabled" => 1
       },
       "safari" => {
         "domain" => "com.apple.Safari",
-        "AutoFillFromAddressBook" => false,
-        "AutoFillMiscellaneousForms" => false,
-        "AutoFillPasswords" => false,
-        "AutoOpenSafeDownloads" => false,
-        "HistoryAgeInDaysLimit" => 365000,
-        "IncludeDevelopMenu" => true,
-        "NewTabBehavior" => 1,
-        "NewWindowBehavior" => 1,
-        "SafariGeolocationPermissionPolicy" => false,
-        "SendDoNotTrackHTTPHeader" => true,
-        "WebKitDefaultFixedFontSize" => 12
+        "AutoFillFromAddressBook" => false
       },
       "screensaver" => {
         "domain" => "com.apple.screensaver",
         "askForPassword" => 1,
         "askForPasswordDelay" => 5
-      },
-      "networkbrowser" => {
-        "domain" => "com.apple.NetworkBrowser",
-        "DisableAirDrop" => true
       }
     }
   }
